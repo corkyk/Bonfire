@@ -2,23 +2,24 @@
 <div class="container">
 
 	<div class="hero-unit">
-		<h1>Welcome to Bonfire.</h1>
+		<img src='assets/images/prolexic_logo.gif' style="float:left;margin-top:-5px;margin-right:25px;"><h2>Prolexic Mitigation Management.</h2>
 
-		<p>Kickstart your CodeIgniter applications.</p>
+		<p>DDOS Event & Incident Tracking.</p>
 	</div>
 
-<p>If you're new to Bonfire, but familiar with <a href="http://www.codeigniter.com" target="_blank">CodeIgniter</a>, then you should be up an running within the system in no time.</p>
-
-<p>If you're new to CodeIgniter, make sure you read through and understand the latest <a href="http://codeigniter.com/user_guide/" target="_blank">CodeIgniter User Guide</a> before diving into Bonfire. Your headaches will thank you.</p>
-
-
-<p>If you are new to Bonfire, you should start by reading the <?php echo anchor('http://cibonfire.com/learn', 'docs', 'target="_blank"') ?>.</p>
-
+<!--  -->
 <?php if (isset($current_user->email)) : ?>
 
-	<div class="alert alert-info" style="text-align: center">
-		<?php echo anchor(SITE_AREA, "Dive into Bonfire's Springboard"); ?>
-	</div>
+	<!-- Event listing -->
+	<p>
+	<center><a href='campaigns/'>View Your Campaigns</a></center>
+	</p>		
+	<?php if($current_user->role_name == 'Administrator' && $current_user->active = '1' && $current_user->deleted == '0' && $current_user->banned == '0') : ?>
+		<!-- show admin link -->
+		<div class="alert alert-info" style="text-align: center">
+			<?php echo anchor(SITE_AREA, "Dive into the Mitigation Management Springboard"); ?>
+		</div>
+	<?php endif;?>
 
 <?php else :?>
 
@@ -31,3 +32,16 @@
 
 
 </div>
+
+<?php
+if(ENVIRONMENT == 'development'){
+ print "<pre>";
+ print "DEBUG INFO\n";
+ print "-----------\n";
+ 
+ print "<b>current_user</b>\n";
+ print_r($current_user)."\n";
+
+ print "</pre>";
+}
+?>

@@ -3,13 +3,12 @@ Basic Typography
  */
 body {
 	background-color: #d9dde8;
-	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1,h2,h3 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
 	font-weight: normal;
 	line-height: 2.0;
-	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 }
 
 /*
@@ -20,9 +19,10 @@ Helpers
 }
 
 p.intro {
-	margin: 0 0 2em 0;
+	margin: 0 auto 2em auto;
 	font-size: 125%;
 	color: #777;
+	max-width: 45em;
 	text-align: center;
 }
 
@@ -47,6 +47,7 @@ p.intro {
 	font-weight: lighter;
 	line-height: 1.2em;
 	color: #999;
+	font-family: Helvetica, sans-serif;
 }
 
 .big-text {
@@ -71,8 +72,8 @@ Page Structure
 }
 
 .body {
-	background-color: #fdfdfd;
-	border: 1px solid #adadad;
+	background-color: white;
+	border: 1px solid #DDD;
 	border-top: none;
 
 	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
@@ -81,12 +82,14 @@ Page Structure
 	padding: 100px 20px 20px 20px;
 	z-index: 1;
 	min-height: 300px;
-	
-	font-weight: lighter;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
 .navbar {
-	font-size: 10pt;
+	font-size: 13px;
 }
 
 .nav .dropdown img {
@@ -126,17 +129,17 @@ a.brand {
 	width: 100%;
 	background-color: #eeeeee; /* Old browsers */
 	background-repeat: repeat-x; /* Repeat the gradient */
-	background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #d8d8d8 100%);
+	background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
 
-	background-image: -moz-linear-gradient(top, #e8e8e8 0%, #d8d8d8 100%);
-	background-image: -o-linear-gradient(top, #e8e8e8 0%, #d8d8d8 100%);
-	background-image: -ms-linear-gradient(top, #e8e8e8 0%, #d8d8d8 100%);
-	background-image: linear-gradient(top, #e8e8e8 0%, #d8d8d8 100%); /* W3C */
+	background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+	background-image: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+	background-image: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+	background-image: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%); /* W3C */
 
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
-	border-bottom: 1px solid #c5c5c5;
+	border-bottom: 1px solid #d5d5d5;
 	border-top: 1px solid #163355;
 
 	-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.08);
@@ -149,7 +152,6 @@ a.brand {
 
 .subnav h1 {
 	font-size: 18px;
-	line-height: 16px;
 }
 
 .subnav .nav {
@@ -163,8 +165,8 @@ a.brand {
 	padding-bottom: 11px;
 	font-size: 13px;
 	color: #777;
-	border-right: 1px solid #c3c3c3;
-	border-left: 1px solid #e8e8e8;
+	border-right: 1px solid #d5d5d5;
+	border-left: 1px solid #f5f5f5;
 
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -198,7 +200,7 @@ footer.footer {
 }
 
 .footer p {
-	font-size: 10pt;
+	font-size: 11px;
 }
 
 /*
@@ -346,6 +348,13 @@ Grids
 
 /* Admin Box */
 .admin-box {
+	border: 1px solid #d6e6f0;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	margin-bottom: 18px;
 
 	-ms-overflow-x: scroll;
@@ -354,11 +363,19 @@ Grids
 }
 
 .admin-box h3 {
-	color: #333;
-	font-family: Arial, sans-serif;
-	font-size: 20pt;
-	padding: 0 10px 0 0;
-	margin: 0;
+	background: #243957;
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+	font-size: 16px;
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.8);
+	padding: 0 10px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 .admin-box .table {
@@ -367,6 +384,7 @@ Grids
 }
 
 .admin-box .table th {
+	background-color: #ddd;
 	border-bottom: 1px solid #b6b6c6;
 }
 
@@ -409,10 +427,6 @@ tfoot td {
 	line-height: 2.1 !important;
 }
 
-.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
-	background-color: #f5f5f5;
-}
-
 /*
 Login Page
  */
@@ -425,12 +439,12 @@ Login Page
 Tabs
  */
 .nav-tabs > li > a {
-	border-color: #f2f2f2;
-	border-bottom-color: #d5d5d5;
+	border-color: #d5d5d5;
 }
 
 .nav-tabs a {
 	color: #999;
+	background-color: #f2f2f2;
 }
 
 .nav-tabs .active a {
@@ -446,19 +460,19 @@ Tabs
 }
 
 .admin-box .nav-tabs {
-	background: whitesmoke;
+	background: #849cb7;
 	padding-left: 10px;
 	padding-top: 7px;
-	border-bottom: 1px solid #d5d5d5;
+	border-bottom: 1px solid #767676;
 }
 
 .admin-box .nav-tabs a {
-	background-color: none;
-	color: #333;
+	background-color: #243957;
+	color: #fff;
 }
 
 .admin-box .nav-tabs > li > a {
-	border-color: none;
+	border-color: #243957;
 }
 
 .admin-box .nav-tabs .active a {
@@ -471,8 +485,9 @@ Tabs
 
 .admin-box .nav-tabs li a:hover {
 	background-color: #f2f2f2;
-	color: #000;
-	border-color: #d5d5d5;
+	color: #777;
+	border-color: #a6a6a6;
+	border-bottom-color: #767676;
 }
 
 /*
@@ -527,9 +542,10 @@ input[type=checkbox],input[type=radio] {
 
 .admin-box legend {
 	display: block;
-	padding-top: 12pt;
-	font-size: 14pt;
-	font-weight: normal;
+	background: #d9dde8;
+	font-size: 16px;
+	text-indent: 10px;
+	font-weight: lighter;
 	margin-bottom: auto;
 }
 
@@ -582,6 +598,42 @@ Additional Buttons
 	border-top: 4px solid #a6a6a6;
 }
 
+/*
+  AJAX Loader
+*/
+#loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 9999;
+	display: none;
+}
+#loader .box {
+	position: relative;
+	margin: 20px auto;
+	text-align: center;
+	padding: 20px 15px;
+	background: #fff;
+	border: 5px solid #3a527c;
+	border-left: 0;
+	border-right: 0;
+}
+#loader .box img {
+	display: block;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+/*
+ * Drop-down menu 3rd Level fix/hack?
+ */
+li.parent-menu {
+	position: relative;
+}
+
 /*--------------------------------------------------------------------
 // RESPONSIVE FIXES
 //-------------------------------------------------------------------*/
@@ -596,7 +648,7 @@ Additional Buttons
 	#user-menu a { display: inline-block; width: auto; }
 	.toolbar-profile-img { width: auto; }
 	.toolbar-profile-img img { width: 24px; height: 24px; }
-	#tb_email,
+	#tb_email, 
 	#user-menu .dropdown-toggle,
 	#user-menu p { display: none !important; }
 	.dropdown-menu > li:hover > ul { display: none; }

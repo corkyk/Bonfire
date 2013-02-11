@@ -1,7 +1,5 @@
-<h1>This Page Intentionally Left Blank</h1>
+<h1>Admin Area Landing Page</h1>
 
-<p>As of Bonfire <?php echo BONFIRE_VERSION ?>, this page has no default content.</p>
-
-<p>This is your playground.</p>
+<p>As of right now, this page has no default content.</p>
 
 <p>Make it home.</p>

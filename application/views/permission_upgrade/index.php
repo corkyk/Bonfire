@@ -1,1 +1,1 @@
-<h2>Bonfire Permissions Upgrade.</h2>
+<h2>Permissions Upgrade.</h2>
